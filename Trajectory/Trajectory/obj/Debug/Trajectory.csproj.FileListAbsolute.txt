@@ -1,0 +1,24 @@
+C:\Users\Hsiung\Documents\Visual Studio 2013\Projects\Trajectory\Trajectory\bin\Debug\Trajectory.exe.config
+C:\Users\Hsiung\Documents\Visual Studio 2013\Projects\Trajectory\Trajectory\bin\Debug\Trajectory.exe
+C:\Users\Hsiung\Documents\Visual Studio 2013\Projects\Trajectory\Trajectory\bin\Debug\Trajectory.pdb
+C:\Users\Hsiung\Documents\Visual Studio 2013\Projects\Trajectory\Trajectory\obj\Debug\Trajectory.csprojResolveAssemblyReference.cache
+C:\Users\Hsiung\Documents\Visual Studio 2013\Projects\Trajectory\Trajectory\obj\Debug\Trajectory.MainWindow.resources
+C:\Users\Hsiung\Documents\Visual Studio 2013\Projects\Trajectory\Trajectory\obj\Debug\Trajectory.Properties.Resources.resources
+C:\Users\Hsiung\Documents\Visual Studio 2013\Projects\Trajectory\Trajectory\obj\Debug\Trajectory.csproj.GenerateResource.Cache
+C:\Users\Hsiung\Documents\Visual Studio 2013\Projects\Trajectory\Trajectory\obj\Debug\Trajectory.exe
+C:\Users\Hsiung\Documents\Visual Studio 2013\Projects\Trajectory\Trajectory\obj\Debug\Trajectory.pdb
+D:\Workspace\Trajectory\Trajectory\bin\Debug\Trajectory.exe
+D:\Workspace\Trajectory\Trajectory\bin\Debug\Newtonsoft.Json.dll
+D:\Workspace\Trajectory\Trajectory\bin\Debug\Trajectory.exe.config
+D:\Workspace\Trajectory\Trajectory\bin\Debug\System.Net.Json.dll
+D:\Workspace\Trajectory\Trajectory\obj\Debug\Trajectory.Forms.CAboutBox.resources
+D:\Workspace\Trajectory\Trajectory\obj\Debug\Trajectory.Forms.MainForm.resources
+D:\Workspace\Trajectory\Trajectory\obj\Debug\Trajectory.MainWindow.resources
+D:\Workspace\Trajectory\Trajectory\obj\Debug\Trajectory.Properties.Resources.resources
+D:\Workspace\Trajectory\Trajectory\obj\Debug\Trajectory.Views.CBaiduMapForm.resources
+D:\Workspace\Trajectory\Trajectory\obj\Debug\Trajectory.Views.CRoadMapForm.resources
+D:\Workspace\Trajectory\Trajectory\obj\Debug\Trajectory.csproj.GenerateResource.Cache
+D:\Workspace\Trajectory\Trajectory\obj\Debug\Trajectory.exe
+D:\Workspace\Trajectory\Trajectory\obj\Debug\Trajectory.pdb
+D:\Workspace\Trajectory\Trajectory\bin\Debug\Trajectory.pdb
+D:\Workspace\Trajectory\Trajectory\obj\Debug\Trajectory.csprojResolveAssemblyReference.cache
