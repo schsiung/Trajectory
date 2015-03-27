@@ -1,0 +1,133 @@
+﻿ <!DOCTYPE html>
+<html>
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>背景地图</title> 
+<script type="text/javascript"src="http://api.map.baidu.com/api?key=X1558tpz8yQbg92I00Whi2Pe&v=1.4&services=true">
+</script>  
+<!--加载鼠标测距工具-->  
+<script src="DistanceTool_min.js" type="text/javascript"></script>
+<!--加载鼠标绘制工具-->  
+<script type="text/javascript" src="DrawingManager_min.js"></script>  
+<link rel="stylesheet" href="DrawingManager_min.css" />  
+<style type="text/css">  
+    html{height:100%}    
+    body{height:100%;margin:0px;padding:0px}    
+    #container{height:100%}    
+</style>
+</head>
+<body> 
+//<input type="button" value="开启" onclick="testFunc(null)" /> 
+<div style="width:100%;height:100%;border:1px solid gray" id="container">
+
+<div id="mouselng" style="visibility:hidden"></div>
+<div id="mouselat" style="visibility:hidden"></div> 
+</div> 
+
+</body>
+</html>
+ <script type="text/javascript">
+    var map = new BMap.Map("container");
+    map.centerAndZoom(new BMap.Point(108.876433, 36.269395), 5);
+    map.addControl(new BMap.ScaleControl()); //添加比例尺控件(左下角显示的比例尺控件)
+    map.addControl(new BMap.OverviewMapControl());// 缩略图控件
+    var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE }); 
+    map.addControl(ctrl_nav);//添加标准地图控件(左上角的放大缩小左右拖拽控件)
+
+    map.enableDragging(); //启用地图拖拽事件，默认启用(可不写)
+    map.enableScrollWheelZoom(); //启用地图滚轮放大缩小
+    map.enableDoubleClickZoom(); //启用鼠标双击放大，默认启用(可不写)
+    map.enableKeyboard(); //启用键盘上下左右键移动地图 
+    map.enableContinuousZoom();   // 开启连续缩放效果  
+    map.enableInertialDragging(); // 开启惯性拖拽效果  
+  
+	//var traffic = new BMap.TrafficLayer();        // 创建交通流量图层实例      
+	//map.addTileLayer(traffic);   
+  
+  
+    //实时显示地图坐标 strat
+    map.addEventListener("mousemove",GetlngAndlat); 
+	//map.addEventListener("click",testFunc)
+	 
+
+
+	//-----------------分割线------------------------
+	//接下来为函数定义
+    function GetlngAndlat(e) {
+    if(e.point.lng!=null)  
+     {   
+      //document.getElementById("mouselng").innerHTML=e.point.lng;  
+      //document.getElementById("mouselat").innerHTML=e.point.lat;  
+	  window.external.setlngAndlatStrip(e.point.lng,e.point.lat);
+     }		 
+	}
+	
+	//在地图上画轨迹
+    function DrawOrit()  
+    {  
+		var lngArray=[];  //经度数组
+		var latArray=[];  //纬度数组
+		var total_num= window.external.getRowsNumber();  //轨迹中所包含点的数量
+		for(var i=0;i<total_num;i++)  
+		{  
+			lngArray.push(window.external.GetLngPoints(i)); 
+			latArray.push(window.external.GetLatPoints(i));
+		}  
+  
+		var PointArr=[];  
+		for(var i=0;i<total_num;i++)  
+		{//偶数索引存经度，奇数存维度  
+			PointArr.push(new BMap.Point(lngArray[i],latArray[i])); 
+			var marker = new BMap.Marker(new BMap.Point(lngArray[i],latArray[i]));        // 创建标注    
+			map.addOverlay(marker);                     // 将标注添加到地图中
+		}  
+		//var polyline = new BMap.Polyline(PointArr, {strokeColor:"blue", strokeWeight:6,   strokeOpacity:0.5});  //定义折线  
+		//map.addOverlay(polyline);  
+		//window.external.ClearRows_num();//重置窗体计数器  
+    }
+	
+	
+	//在地图上画圆形或者方形 
+    // 编写自定义函数，创建标注   
+    function addMarker(point) { 
+        var myIcon = new BMap.Icon("png-0003.png", new BMap.Size(24, 24));
+        var marker = new BMap.Marker(point, { icon: myIcon });  // 创建标注
+        map.addOverlay(marker);              // 将标注添加到地图中  
+    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	function ClearAll()
+	{
+		for(var i = 0; i < overlays.length; i++){  
+            map.removeOverlay(overlays[i]);  
+        }  
+        overlays.length = 0
+	}
+	
+	
+	
+	
+	
+	
+	function  testFunc(e) {
+		alert("Mouse clicked");
+	 }
+</script>
+

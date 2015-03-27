@@ -1,0 +1,14 @@
+D:\Workspace\Trajectory\Trajectory\bin\Release\Trajectory.exe.config
+D:\Workspace\Trajectory\Trajectory\bin\Release\Trajectory.exe
+D:\Workspace\Trajectory\Trajectory\bin\Release\Trajectory.pdb
+D:\Workspace\Trajectory\Trajectory\obj\Release\Trajectory.Forms.CAboutBox.resources
+D:\Workspace\Trajectory\Trajectory\obj\Release\Trajectory.Forms.MainForm.resources
+D:\Workspace\Trajectory\Trajectory\obj\Release\Trajectory.MainWindow.resources
+D:\Workspace\Trajectory\Trajectory\obj\Release\Trajectory.Properties.Resources.resources
+D:\Workspace\Trajectory\Trajectory\obj\Release\Trajectory.Views.CBaiduMapForm.resources
+D:\Workspace\Trajectory\Trajectory\obj\Release\Trajectory.Views.CRoadMapForm.resources
+D:\Workspace\Trajectory\Trajectory\obj\Release\Trajectory.csproj.GenerateResource.Cache
+D:\Workspace\Trajectory\Trajectory\obj\Release\Trajectory.exe
+D:\Workspace\Trajectory\Trajectory\obj\Release\Trajectory.pdb
+D:\Workspace\Trajectory\Trajectory\bin\Release\System.Net.Json.dll
+D:\Workspace\Trajectory\Trajectory\bin\Release\Newtonsoft.Json.dll

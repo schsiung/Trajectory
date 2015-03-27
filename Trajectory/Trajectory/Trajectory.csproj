@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF990EB1-ACE4-471F-A0F9-5B47FAE6740C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Trajectory</RootNamespace>
+    <AssemblyName>Trajectory</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Json">
+      <HintPath>.\System.Net.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\CMainFormAndCTreeBridage.cs" />
+    <Compile Include="DataMgr\CDBDataMgr.cs" />
+    <Compile Include="DataMgr\CSystemInfoMgr.cs" />
+    <Compile Include="Entity\CEntityGeocoderResult.cs" />
+    <Compile Include="Entity\CEntityHelper.cs" />
+    <Compile Include="Entity\CEntityMove.cs" />
+    <Compile Include="Entity\CEntitySample.cs" />
+    <Compile Include="Entity\CEntityStop.cs" />
+    <Compile Include="Entity\CEntityTrajectory.cs" />
+    <Compile Include="Entity\CEntityUser.cs" />
+    <Compile Include="Entity\CStatusInfoEventArgs.cs" />
+    <Compile Include="Forms\CAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CAboutBox.Designer.cs">
+      <DependentUpon>CAboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormHelper.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CASemanticGainer.cs" />
+    <Compile Include="Models\CAStopFinder.cs" />
+    <Compile Include="Models\CATrajectoryDrawer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\CBaiduMapProxy.cs" />
+    <Compile Include="Utils\CSpatialUtil.cs" />
+    <Compile Include="Views\CTabControl\CExTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\CTabControl\ITabPage.cs" />
+    <Compile Include="Views\CTabPage\CBaiduMapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CTabPage\CBaiduMapForm.Designer.cs">
+      <DependentUpon>CBaiduMapForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CTabPage\CRoadMapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CTabPage\CRoadMapForm.Designer.cs">
+      <DependentUpon>CRoadMapForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CTreeView\CImageList.cs" />
+    <Compile Include="Views\CTreeView\CTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\CTreeView\CTreeNode.cs" />
+    <Compile Include="Views\CTreeView\CTreeType.cs" />
+    <EmbeddedResource Include="Forms\CAboutBox.resx">
+      <DependentUpon>CAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\CTabPage\CBaiduMapForm.resx">
+      <DependentUpon>CBaiduMapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CTabPage\CRoadMapForm.resx">
+      <DependentUpon>CRoadMapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\用户.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\树\用户.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\树\用户设置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\轨迹.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
